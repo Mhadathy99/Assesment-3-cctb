@@ -11,6 +11,7 @@ window.addEventListener('load', () => {
       firebase.auth().signInWithPopup(provider)
         .then(function(result) {
             console.log('Logging successfully', result.user)
+            window.location.href='home.html'
         })
         .catch(function(error) {
           console.log('Logging fail', error)
@@ -18,13 +19,14 @@ window.addEventListener('load', () => {
     });
   
     document.getElementById('sign-in-traditional').addEventListener('click', function() {
-      var emailtxt = document.getElementById('email').value;
-      var passtxt = document.getElementById('password').value;
+      var emailtxt = document.getElementById('account_email').value;
+      var passtxt = document.getElementById('account_passwd').value;
   
       firebase.auth().signInWithEmailAndPassword(emailtxt, passtxt)
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
+      window.location.href='home.html'
       // ...
       console. log('Logging successfully')
     })
@@ -61,6 +63,7 @@ window.addEventListener('load', () => {
   confirmationResult.confirm(code).then((result) => {
     // User signed in successfully.
     const user = result.user;
+    window.location.href='home.html'
     // ...
   }).catch((error) => {
     // User couldn't sign in (bad verification code?)
