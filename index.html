@@ -51,6 +51,7 @@
 
               <!-- email address -->
               <div class="form-floating mb-3">
+                <form action="" method="post" class="p-4 p-md-5 card rounded-x1"></form>
                 <input required type="email" class="form-control" id="account_email" placeholder="Email address">
                 <label for="account_email">Email address</label>
               </div>
@@ -69,7 +70,7 @@
 
               <!-- submot button -->
               <div class="d-grid mb-3">
-                <button type="submit" class="btn btn-primary">
+                <button id="sign-in-traditional" type="submit" class="btn btn-primary">
                   <span>Sign in</span>
                   <svg class="rtl-flip" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor">
@@ -98,7 +99,7 @@
             </div>
 
             <div class="w-100 d-inline-grid gap-auto-3">
-              <a title="Gmail Login" href="#!" class="btn bg-googleplay border w-100 mx-0 text-gray-700">
+              <a  id="sign-in-google" title="Gmail Login" href="#!" class="btn bg-googleplay border w-100 mx-0 text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-google text-white" viewBox="0 0 16 16">
                   <path
@@ -107,8 +108,8 @@
               </a>
 
 
-
-              <a title="Cellphone login" href="#!" class="btn bg-black border w-100 mx-0 text-white">
+              <div id="recaptcha-container"></div>
+              <a id="sign-in-phone" title="Cellphone login" href="#!" class="btn bg-black border w-100 mx-0 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
